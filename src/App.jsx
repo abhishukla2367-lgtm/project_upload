@@ -15,7 +15,6 @@ function App() {
           <p>Style, sophistication, and service tailored just for you.</p>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
