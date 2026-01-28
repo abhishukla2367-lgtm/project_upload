@@ -1,29 +1,23 @@
-.footer {
-  background-color: #1a1a1a;
-  color: #aaa;
-  padding: 1rem 5%;
-  text-align: center;
-  margin-top: 40px;
-}
+/* src/components/Footer.css */
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: #aaa;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
+.footer-container {
+  background-color: #000;
   color: #fff;
+  padding: 20px;
+  text-align: center;
+  /* Position properties like 'position: absolute' or 'bottom: 0' are NOT needed here */
 }
 
-.footer-links span {
-    color: #555;
+.footer-text {
+  margin: 0 0 10px 0; 
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none; 
+  margin: 0 10px; 
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }

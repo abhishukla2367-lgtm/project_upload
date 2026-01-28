@@ -1,52 +1,102 @@
-.app-container {
-  min-height: 100vh;
+/* src/App.css: All combined styles for layout, logo, buttons, and text */
+
+/* CRITICAL Global Resets */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* Main App Layout (Full Screen/Footer at bottom) */
+.App {
+  width: 100%;
+  height: 100vh; /* Fills the viewport height */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stacks children vertically */
+  position: relative; 
 }
 
-.main-content {
-  flex: 1; 
-  padding: 2rem 5%;
+/* Navbar Styles */
+.navbar-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
 }
 
-.hero-section {
-    text-align: center;
-    padding: 4rem 0;
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hero-logo-container {
-    margin-bottom: 20px;
+/* Container for the logo (img) and title (h1) to sit side-by-side (FLEXBOX) */
+.navbar-brand {
+    display: flex; /* CRITICAL: Activates the side-by-side layout */
+    align-items: center; /* Vertically aligns the image and text */
 }
 
-.salon-logo-main {
-    height: 100px;
+/* Logo Image Styling */
+.navbar-logo-img {
+    height: 60px; /* Adjust size here */
     width: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 0;
 }
 
-.hero-section h1 {
-    font-size: 2.5rem;
-    color: #333;
+/* Styling for the text title */
+.navbar-title {
+    margin: 0 0 0 15px; /* Adds space between the logo and the text */
+    font-size: 1.5rem; 
+    color: #333; 
+    /* Remove absolute positioning styles from previous attempts */
+    position: static; 
+    top: auto; 
+    left: auto;
+    z-index: auto;
 }
 
-.hero-section p {
-    margin-top: 10px;
-    color: #555;
+/* Button Styling */
+.navbar-buttons {
+    /* Push the buttons to the right edge */
+    margin-left: auto; 
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 1rem 2rem;
-    background-color: #FF1493;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.navbar-buttons button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
 }
 
-.cta-button:hover {
-    background-color: #e6007e;
+.navbar-signin {
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.navbar-signup {
+  background-color: #007BFF;
+  color: white;
+}
+
+
+/* Main Content Area */
+.main-content {
+  padding: 40px;
+  flex: 1; 
+  overflow-y: auto; 
+  text-align: center; 
+}
+
+/* Heading and Paragraph Text Styles */
+.main-content h2 {
+  font-size: 3rem; 
+  margin-bottom: 10px; 
+  color: #A52A2A; 
+}
+
+.main-content p {
+  font-size: 1.3rem;
 }
