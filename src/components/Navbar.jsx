@@ -1,6 +1,5 @@
 import React from 'react';
 import './Navbar.css';
-
 const Navbar = ({ logoSrc, salonName }) => {
   return (
     <header className="navbar"> {/* Using <header> as in your first snippet for better HTML semantics */}
@@ -9,11 +8,10 @@ const Navbar = ({ logoSrc, salonName }) => {
         <span className="salon-name">{salonName}</span>
       </div>
       <div>
-              <button className="sign-in">Sign In</button>
-              <button className="sign-up">Sign Up</button>
+          <button className="sign-in">Sign In</button>
+          <button className="sign-up">Sign Up</button>
       </div>
     </header>
   );
 };
-
 export default Navbar;
