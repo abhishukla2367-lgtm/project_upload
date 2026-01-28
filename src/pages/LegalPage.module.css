@@ -1,0 +1,29 @@
+.legalContainer {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  color: #333;
+}
+
+.title {
+  color: #b2342a; /* Matching your barbershop red */
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.lastUpdated {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 1.3rem;
+  margin-top: 25px;
+  color: #3a3439;
+}

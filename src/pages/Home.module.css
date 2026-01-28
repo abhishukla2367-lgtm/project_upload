@@ -1,0 +1,21 @@
+.container {
+  /* Use Flexbox for easy centering */
+  display: flex;
+  /* Stack items vertically (h1, p, button) */
+  flex-direction: column; 
+  
+  /* Centers content horizontally within the container */
+  align-items: center; 
+  
+  /* Centers content vertically within the available space */
+  justify-content: center; 
+  
+  /* Ensures the container takes up the space between the header and footer */
+  min-height: calc(100vh - 150px); 
+
+  /* Centers the text itself */
+  text-align: center;
+  padding: 20px;
+
+  /* Rest of your existing styles below (mainTitle, subtitle, bookButton...) */
+}

@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fbf3ef; /* Light vintage cream */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.heading {
+  color: #3a3439; /* Deep charcoal */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 3px solid #b2342a; /* Barbershop red accent */
+  padding-bottom: 10px;
+}
+
+.form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #473e2d; /* Warm earth tone */
+}
+
+.inputField {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #b2342a;
+}
+
+.submitButton {
+  background-color: #3a3439;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.submitButton:hover {
+  background-color: #b2342a; /* Changes to accent red on hover */
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+}
+
+.footerText {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.link {
+  color: #b2342a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
