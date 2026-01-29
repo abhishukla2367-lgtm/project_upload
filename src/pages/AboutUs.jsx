@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './AboutUs.module.css';
-
 function AboutUs() {
   return (
     <main className={styles.container}>
@@ -12,5 +11,4 @@ function AboutUs() {
     </main>
   );
 }
-
 export default AboutUs;

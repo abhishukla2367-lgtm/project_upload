@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-
-// Import all page components
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
@@ -11,17 +9,10 @@ import SignUp from './pages/SignUp';
 import PrivacyPolicy from './pages/PrivacyPolicy'; 
 import TermsOfService from './pages/TermsOfService'; 
 import './App.css'; 
-
-// --- Import your logo image here ---
-// Assuming your logo is named 'logo.png' and is in the src/assets folder
 import logo from './assets/salon_logo.jpg'; 
-// If it's in the public folder, you might use: const logo = '/logo.png';
-
-// Updated Header component with classNames and the logo
 const Header = () => (
   <header>
     <div className="logo-container">
-        {/* Added the <img> tag using the imported 'logo' variable */}
         <img src={logo} alt="Vintage Cuts Logo" className="logo-icon" />
         <h1>Vintage Cuts</h1>
     </div>
@@ -37,11 +28,9 @@ const Header = () => (
     </div>
   </header>
 );
-
-// Assuming you have a basic Footer component with links
 const Footer = () => (
   <footer>
-    <p>&copy; {new Date().getFullYear()} All rights reserved. Vintage Cuts</p>
+    <p>&copy; {new Date().getFullYear()} Vintage Cuts. All rights reserved.</p>
     <nav>
       <Link to="/privacy">Privacy Policy</Link>
       <Link to="/terms">Terms of Service</Link>
@@ -52,10 +41,8 @@ const Footer = () => (
 function App() {
   return (
     <Router>
-      {/* Header and Footer are outside of Routes so they appear on every page */}
       <Header />
       <main>
-        {/* Define which component renders for which path */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
@@ -71,5 +58,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

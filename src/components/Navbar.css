@@ -1,5 +1,3 @@
-/* src/components/Navbar.css */
-
 .navbar-header {
   padding: 20px;
   border-bottom: 1px solid #eee;
@@ -27,7 +25,7 @@
 }
 
 .navbar-signup {
-  background-color: #007BFF; /* Updated to a new blue color */
+  background-color: #007BFF; 
   color: white;
-  border-radius: 4px; /* Optional: adds a slight curve to the button */
+  border-radius: 4px; 
 }

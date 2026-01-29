@@ -1,18 +1,16 @@
-/* AboutUs.module.css */
-
 .container {
   max-width: 800px;
-  margin: 40px auto; /* Center the content on the page */
+  margin: 40px auto; 
   padding: 20px;
-  background-color: #ffffff; /* Clean white background */
+  background-color: #ffffff; 
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .aboutHeading {
   font-size: 2.5rem;
-  color: #333333; /* Dark gray for strong contrast */
-  border-bottom: 2px solid #a37f5b; /* A warm "vintage" accent color */
+  color: #333333; 
+  border-bottom: 2px solid #a37f5b; 
   padding-bottom: 10px;
   margin-bottom: 20px;
   font-weight: 500;
@@ -20,11 +18,9 @@
 
 .missionStatement {
   font-size: 1.1rem;
-  line-height: 1.6; /* Improve readability */
-  color: #555555; /* Medium gray for body text */
+  line-height: 1.6;
+  color: #555555; 
 }
-
-/* Add a hover effect for a touch of interactivity */
 .missionStatement:hover {
     color: #333333;
     transition: color 0.3s ease-in-out;

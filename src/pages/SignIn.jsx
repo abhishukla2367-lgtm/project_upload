@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './SignIn.module.css';
 import { Link } from 'react-router-dom';
-
 function SignIn() {
   return (
     <main className={styles.container}>
@@ -9,10 +8,8 @@ function SignIn() {
       <form className={styles.form}>
         <label htmlFor="email" className={styles.label}>Email Address</label>
         <input type="email" id="email" placeholder="you@example.com" className={styles.inputField} required />
-        
         <label htmlFor="password" className={styles.label}>Password</label>
         <input type="password" id="password" placeholder="Password" className={styles.inputField} required />
-        
         <button type="submit" className={styles.submitButton}>Sign In</button>
       </form>
       <p className={styles.footerText}>
@@ -21,5 +18,4 @@ function SignIn() {
     </main>
   );
 }
-
 export default SignIn;

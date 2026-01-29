@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './LegalPage.module.css';
-
 const TermsOfService = () => (
   <main className={styles.legalContainer}>
     <h1 className={styles.title}>Terms of Service</h1>
@@ -27,5 +26,4 @@ const TermsOfService = () => (
     </section>
   </main>
 );
-
 export default TermsOfService;

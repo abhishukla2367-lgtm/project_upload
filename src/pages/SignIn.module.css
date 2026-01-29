@@ -4,18 +4,18 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #fbf3ef; /* Light vintage cream */
+  background-color: #fbf3ef; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
 }
 
 .heading {
-  color: #3a3439; /* Deep charcoal */
+  color: #3a3439; 
   font-size: 2rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-bottom: 3px solid #b2342a; /* Barbershop red accent */
+  border-bottom: 3px solid #b2342a; 
   padding-bottom: 10px;
 }
 
@@ -33,7 +33,7 @@
 .label {
   font-weight: 600;
   margin-bottom: 8px;
-  color: #473e2d; /* Warm earth tone */
+  color: #473e2d; 
 }
 
 .inputField {
@@ -63,7 +63,7 @@
 }
 
 .submitButton:hover {
-  background-color: #b2342a; /* Changes to accent red on hover */
+  background-color: #b2342a; 
 }
 
 .submitButton:active {

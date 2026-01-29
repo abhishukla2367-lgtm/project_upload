@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Services.module.css';
-
 function Services() {
   return (
     <main className={styles.container}>
@@ -19,5 +18,4 @@ function Services() {
     </main>
   );
 }
-
 export default Services;

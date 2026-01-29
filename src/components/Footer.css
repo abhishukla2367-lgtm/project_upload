@@ -1,11 +1,8 @@
-/* src/components/Footer.css */
-
 .footer-container {
   background-color: #000;
   color: #fff;
   padding: 20px;
   text-align: center;
-  /* Position properties like 'position: absolute' or 'bottom: 0' are NOT needed here */
 }
 
 .footer-text {

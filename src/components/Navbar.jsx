@@ -1,6 +1,5 @@
 import React from 'react';
-import './Navbar.css'; // Import the dedicated CSS file
-
+import './Navbar.css'; 
 const Navbar = () => {
   return (
     <header className="navbar-header">
@@ -14,5 +13,4 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;

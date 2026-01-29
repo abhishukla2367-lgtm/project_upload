@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from './SignUp.module.css';
 import { Link } from 'react-router-dom';
-
 function SignUp() {
   const [formData, setFormData] = useState({
     username: '',
@@ -9,11 +8,9 @@ function SignUp() {
     password: '',
     confirmPassword: ''
   });
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
@@ -21,7 +18,6 @@ function SignUp() {
       return;
     }
     console.log('Account Created:', formData);
-    // Add your signup logic here (e.g., API call)
   };
 
   return (
@@ -60,5 +56,4 @@ function SignUp() {
     </main>
   );
 }
-
 export default SignUp;

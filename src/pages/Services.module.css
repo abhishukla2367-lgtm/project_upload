@@ -1,8 +1,6 @@
-/* Services.module.css */
-
 .container {
   max-width: 800px;
-  margin: 40px auto; /* Centers the content area */
+  margin: 40px auto; 
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -11,31 +9,31 @@
 
 .servicesHeading {
   font-size: 2.5rem;
-  color: #333333; /* Dark gray heading color */
-  border-bottom: 2px solid #a37f5b; /* Accent color border */
+  color: #333333; 
+  border-bottom: 2px solid #a37f5b; 
   padding-bottom: 10px;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
 .servicesList {
-  list-style-type: none; /* Removes default bullet points */
+  list-style-type: none; 
   padding: 0;
 }
 
 .serviceItem {
   padding: 15px 0;
-  border-bottom: 1px solid #eeeeee; /* Light separator line */
+  border-bottom: 1px solid #eeeeee; 
   color: #555555;
   line-height: 1.4;
 }
 
 .serviceItem:last-child {
-  border-bottom: none; /* Removes the line from the final item */
+  border-bottom: none; 
 }
 
 .serviceName {
-  font-weight: **bold**;
-  color: #a37f5b; /* Applies the brand accent color to the service names */
+  font-weight: bold;
+  color: #a37f5b; 
   margin-right: 5px;
 }
