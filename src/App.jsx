@@ -4,30 +4,31 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import ContactUs from './pages/ContactUs';
-import SignIn from './pages/SignIn';
+import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import PrivacyPolicy from './pages/PrivacyPolicy'; 
-import TermsOfService from './pages/TermsOfService'; 
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import logo from './assets/salon_logo.jpg';
 import './App.css'; 
-import logo from './assets/salon_logo.jpg'; 
 const Header = () => (
   <header>
     <div className="logo-container">
-        <img src={logo} alt="Vintage Cuts Logo" className="logo-icon" />
+        <img src={logo} alt="Vintage Cuts Logo" className="logo" />
         <h1>Vintage Cuts</h1>
     </div>
     <nav className="main-nav">
-      <Link to="/">Home</Link>
-      <Link to="/about">About Us</Link>
-      <Link to="/services">Services</Link>
-      <Link to="/contact">Contact Us</Link>
+      <Link to="/">HOME</Link>
+      <Link to="/about">ABOUT</Link>
+      <Link to="/services">SERVICES</Link>
+      <Link to="/contact">CONTACT</Link>
     </nav>
     <div className="auth-buttons">
-        <Link to="/signin" className="sign-in-link">Sign In</Link>
-        <Link to="/signup" className="sign-up-button">Sign Up</Link>
+      <Link to="/login" className="login-link">LOGIN</Link>
+      <Link to="/signup" className="signup-btn">SIGN UP</Link>
     </div>
   </header>
 );
+
 const Footer = () => (
   <footer>
     <p>&copy; {new Date().getFullYear()} Vintage Cuts. All rights reserved.</p>
@@ -41,21 +42,26 @@ const Footer = () => (
 function App() {
   return (
     <Router>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermsOfService />} />
-        </Routes>
-      </main>
-      <Footer />
+      <div className="app-wrapper">
+        <Header />
+        
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+          </Routes>
+        </main>
+        
+        <Footer />
+      </div>
     </Router>
   );
 }
+
 export default App;

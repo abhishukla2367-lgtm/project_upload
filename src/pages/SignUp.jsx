@@ -51,7 +51,7 @@ function SignUp() {
         <button type="submit" className={styles.submitButton}>Create Account</button>
       </form>
       <p className={styles.footerText}>
-        Already have an account? <Link to="/signin" className={styles.link}>Sign In</Link>
+        Already have an account? <Link to="/login" className={styles.link}>Login</Link>
       </p>
     </main>
   );
