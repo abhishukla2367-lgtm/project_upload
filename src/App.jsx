@@ -1,106 +1,148 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+  useLocation,
+} from "react-router-dom";
 
-import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Services from './pages/Services';
-import ContactUs from './pages/ContactUs';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Services from "./pages/Services";
+import ContactUs from "./pages/ContactUs";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
-import logo from './assets/salon_logo.jpg';
-import './App.css';
+import logo from "./assets/salon_logo.jpg";
+import bgImage from "./assets/salon_image.jpg"; // used inline
+import "./App.css";
 
+/* ==================== SCROLL TO TOP ==================== */
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
+  return null;
+};
+
+/* ==================== HEADER ==================== */
 const Header = () => (
-  <header>
+  <header className="app-header glass">
     <div className="logo-container">
-      <img src={logo} alt="Vintage Cuts salon logo" className="logo" />
-      <h1>Vintage Cuts</h1>
+      <img src={logo} alt="Vintage Cuts Logo" className="logo" />
+      <span className="brand-name">Vintage Cuts</span>
     </div>
 
     <nav className="main-nav">
-      <Link to="/">HOME</Link>
-      <Link to="/about">ABOUT</Link>
-      <Link to="/services">SERVICES</Link>
-      <Link to="/contact">CONTACT</Link>
+      <NavLink to="/" end className="nav-link">
+        Home
+      </NavLink>
+      <NavLink to="/about" className="nav-link">
+        About
+      </NavLink>
+      <NavLink to="/services" className="nav-link">
+        Services
+      </NavLink>
+      <NavLink to="/contact" className="nav-link">
+        Contact
+      </NavLink>
     </nav>
 
-    <div className="auth-buttons">
-      <Link to="/login" className="login-link">LOGIN</Link>
-      <Link to="/signup" className="signup-btn">SIGN UP</Link>
+    <div className="auth-actions">
+      <NavLink to="/login" className="login-link">
+        Login
+      </NavLink>
+      <NavLink to="/signup" className="signup-btn">
+        Sign Up
+      </NavLink>
     </div>
   </header>
 );
 
+/* ==================== FOOTER ==================== */
 const Footer = () => (
-  <footer>
+  <footer className="app-footer glass">
     <div className="footer-content">
-
-      <div className="footer-shortcuts">
+      <div className="footer-section">
         <h4>Quick Links</h4>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign Up</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </div>
 
-      <div className="footer-legal">
+      <div className="footer-section">
         <h4>Legal</h4>
-        <Link to="/privacy">Privacy Policy</Link>
-        <Link to="/terms">Terms of Service</Link>
+        <NavLink to="/privacy">Privacy Policy</NavLink>
+        <NavLink to="/terms">Terms of Service</NavLink>
       </div>
 
-      <div className="footer-social">
-        <h4>Follow Us</h4>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-          📸 Instagram
+      <div className="footer-section">
+        <h4>Social</h4>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          Instagram
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-          💼 LinkedIn
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          Facebook
         </a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-          📘 Facebook
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+          LinkedIn
         </a>
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-          𝕏 X
+        <a href="https://x.com/" target="_blank" rel="noreferrer">
+          X
         </a>
       </div>
-
     </div>
 
     <p className="footer-copy">
-      &copy; {new Date().getFullYear()} Vintage Cuts. All rights reserved.
+      © {new Date().getFullYear()} Vintage Cuts. All rights reserved.
     </p>
   </footer>
 );
 
-function App() {
-  return (
-    <Router>
-      <div className="app-wrapper">
-        <Header />
+/* ==================== APP LAYOUT ==================== */
+const AppLayout = () => (
+  <div
+    className="app-wrapper"
+    style={{
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${bgImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+    }}
+  >
+    <Header />
 
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfService />} />
-          </Routes>
-        </main>
+    <main className="app-main">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+      </Routes>
+    </main>
 
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+    <Footer />
+  </div>
+);
+
+/* ==================== ROOT ==================== */
+const App = () => (
+  <Router>
+    <ScrollToTop />
+    <AppLayout />
+  </Router>
+);
 
 export default App;

@@ -1,176 +1,157 @@
+/* ==================== GLOBAL RESET ==================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
+html,
 body {
-  background-color: #ffffff;
-  color: #222;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
 }
 
-.app-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-image: url("./assets/salon_image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+/* ==================== GLASS EFFECT ==================== */
+.glass {
+  background-color: rgba(0, 0, 0, 0.55);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-header {
+/* ==================== HEADER ==================== */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 40px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 18px 60px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ==================== LOGO ==================== */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-.logo-container h1 {
-  font-size: 22px;
+.brand-name {
+  font-size: 1.6rem;
   font-weight: 600;
+  color: #e6c77b;
 }
 
+/* ==================== NAVIGATION ==================== */
 .main-nav {
   display: flex;
   gap: 30px;
 }
 
-.main-nav a {
+.nav-link {
   text-decoration: none;
-  font-weight: 500;
-  color: #333;
-  position: relative;
-  transition: color 0.3s ease;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
-.main-nav a:hover {
-  color: #c59d5f;
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(230, 199, 123, 0.18);
+  color: #e6c77b;
 }
 
-.auth-buttons {
+/* ==================== AUTH ACTIONS ==================== */
+.auth-actions {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 
 .login-link {
+  color: #ffffff;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  padding: 8px 18px;
 }
 
 .signup-btn {
+  padding: 8px 22px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #e6c77b, #c59d5f);
+  color: #000;
   text-decoration: none;
-  background-color: #c59d5f;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 25px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+  font-weight: 500;
 }
 
-.signup-btn:hover {
-  background-color: #a9824a;
-}
-
-main {
+/* ==================== MAIN CONTENT ==================== */
+.app-main {
   flex: 1;
-  padding: 60px 40px;
-  background: rgba(255, 255, 255, 0.85);
+  padding: 60px 20px;
+  color: #ffffff;
 }
 
-footer {
-  background-color: #111;
-  color: #eee;
-  padding: 50px 40px 20px;
+/* ==================== FOOTER ==================== */
+.app-footer {
+  padding: 40px 60px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
-footer h4 {
-  font-size: 16px;
-  margin-bottom: 15px;
-  color: #c59d5f;
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: #e6c77b;
+  font-size: 1rem;
 }
 
-.footer-shortcuts,
-.footer-legal,
-.footer-social {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-footer a {
+.footer-section a {
+  display: block;
   text-decoration: none;
-  color: #ccc;
-  font-size: 14px;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
   transition: color 0.3s ease;
 }
 
-footer a:hover {
-  color: #fff;
+.footer-section a:hover {
+  color: #e6c77b;
 }
 
 .footer-copy {
-  text-align: center;
-  font-size: 13px;
-  color: #aaa;
-  border-top: 1px solid #333;
-  padding-top: 15px;
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
 
-@media (max-width: 768px) {
-  header {
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
+  .app-header {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
   }
 
   .main-nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-  }
-
-  main {
-    padding: 40px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-container h1 {
-    font-size: 18px;
-  }
-
-  .signup-btn {
-    padding: 6px 14px;
-    font-size: 13px;
   }
 }
