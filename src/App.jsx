@@ -17,10 +17,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 
 import logo from "./assets/salon_logo.jpg";
-import bgImage from "./assets/salon_image.jpg"; // used inline
+import bgImage from "./assets/salon_image.jpg";
 import "./App.css";
-
-/* ==================== SCROLL TO TOP ==================== */
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -30,8 +28,6 @@ const ScrollToTop = () => {
 
   return null;
 };
-
-/* ==================== HEADER ==================== */
 const Header = () => (
   <header className="app-header glass">
     <div className="logo-container">
@@ -40,32 +36,18 @@ const Header = () => (
     </div>
 
     <nav className="main-nav">
-      <NavLink to="/" end className="nav-link">
-        Home
-      </NavLink>
-      <NavLink to="/about" className="nav-link">
-        About
-      </NavLink>
-      <NavLink to="/services" className="nav-link">
-        Services
-      </NavLink>
-      <NavLink to="/contact" className="nav-link">
-        Contact
-      </NavLink>
+      <NavLink to="/" end className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
+      <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
+      <NavLink to="/services" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Services</NavLink>
+      <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink>
     </nav>
 
     <div className="auth-actions">
-      <NavLink to="/login" className="login-link">
-        Login
-      </NavLink>
-      <NavLink to="/signup" className="signup-btn">
-        Sign Up
-      </NavLink>
+      <NavLink to="/login" className="login-link">Login</NavLink>
+      <NavLink to="/signup" className="signup-btn">Sign Up</NavLink>
     </div>
   </header>
 );
-
-/* ==================== FOOTER ==================== */
 const Footer = () => (
   <footer className="app-footer glass">
     <div className="footer-content">
@@ -85,33 +67,23 @@ const Footer = () => (
 
       <div className="footer-section">
         <h4>Social</h4>
-        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-          Instagram
-        </a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-          Facebook
-        </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
-        <a href="https://x.com/" target="_blank" rel="noreferrer">
-          X
-        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer">X</a>
       </div>
     </div>
-
-    <p className="footer-copy">
-      © {new Date().getFullYear()} Vintage Cuts. All rights reserved.
-    </p>
+    <div className="footer-bottom">
+      © 2026 Vintage Cuts. All rights reserved.
+    </div>
   </footer>
 );
 
-/* ==================== APP LAYOUT ==================== */
 const AppLayout = () => (
   <div
     className="app-wrapper"
     style={{
-      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${bgImage})`,
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(${bgImage})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
@@ -136,8 +108,6 @@ const AppLayout = () => (
     <Footer />
   </div>
 );
-
-/* ==================== ROOT ==================== */
 const App = () => (
   <Router>
     <ScrollToTop />
