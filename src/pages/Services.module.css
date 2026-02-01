@@ -1,39 +1,65 @@
+/* Services.module.css */
+
 .container {
-  max-width: 800px;
-  margin: 40px auto; 
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9); /* subtle transparent overlay if background image */
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .servicesHeading {
-  font-size: 2.5rem;
-  color: #333333; 
-  border-bottom: 2px solid #a37f5b; 
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #333;
+  letter-spacing: 1px;
 }
 
 .servicesList {
-  list-style-type: none; 
+  list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
 }
 
 .serviceItem {
-  padding: 15px 0;
-  border-bottom: 1px solid #eeeeee; 
-  color: #555555;
-  line-height: 1.4;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #ff6b6b;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
 }
 
-.serviceItem:last-child {
-  border-bottom: none; 
+.serviceItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .serviceName {
-  font-weight: bold;
-  color: #a37f5b; 
-  margin-right: 5px;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .servicesHeading {
+    font-size: 2.2rem;
+  }
+
+  .serviceItem {
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+  }
 }
